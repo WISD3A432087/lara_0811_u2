@@ -25,4 +25,9 @@ Route::get('apple/{name?}',function($name='Everybody'){
     return'Apple,'.$name;
 });
 
+Route::get('dashboard',function(){
+    return'dashboard';
+    
+});
+
 
