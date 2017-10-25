@@ -27,7 +27,7 @@ Route::get('apple/{name?}',function($name='Everybody'){
 
 Route::group(['prefix'=>'admin'],function(){
     Route::get('dashboard',function(){
-    return'dashboard';
+    return 'admin dashboard';
     });
 });
 
