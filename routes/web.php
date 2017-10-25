@@ -17,10 +17,9 @@ Route::get('/',function(){
 
 
 
-Route::get('hello/{name?}',function($name='Everybody'){
+Route::get('say/{name?}',['as'=>' hello.index ',function($name= 'Everybody'){
     return'Hello,'.$name;
-});
-
+}]);
 
 Route::get('apple/{name?}',function($name='Everybody'){
     return'Apple,'.$name;
