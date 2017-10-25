@@ -1,5 +1,4 @@
 <?php
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -10,25 +9,15 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/',['as'=>'home.index','uses'=>
+Route::get('/',['as' => 'home.index', 'uses' =>
     'HomeController@index']);
 
-
-
-
-Route::get('say/{name?}',['as'=>' hello.index ',function($name= 'Everybody'){
-    return'Hello,'.$name;
+Route::get('say/{name?}', ['as' => 'hello.index', function($name = 'Everybody') {
+    return 'Hello, '.$name;
 }]);
 
-Route::get('apple/{name?}',function($name='Everybody'){
-    return'Apple,'.$name;
-});
-
-Route::group(['prefix'=>'admin'],function(){
-    Route::get('dashboard',function(){
-    return 'admin dashboard';
+Route::group(['prefix' => 'admin'], function() {
+    Route::get('dashboard', function() {
+        return 'admin dashboard';
     });
 });
-
-
